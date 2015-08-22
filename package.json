@@ -1,0 +1,24 @@
+{
+  "name": "sign-me-up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelvinabrokwa/sign-me-up.git"
+  },
+  "author": "Kelvin Abrokwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelvinabrokwa/sign-me-up/issues"
+  },
+  "homepage": "https://github.com/kelvinabrokwa/sign-me-up#readme",
+  "dependencies": {
+    "google-auth-library": "^0.9.6",
+    "googleapis": "^2.1.3"
+  }
+}
