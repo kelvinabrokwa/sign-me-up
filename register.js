@@ -62,14 +62,14 @@ function register(CRN) {
    * click on "Add/Drop Classes"
    */
   driver.findElement(By.xpath('/html/body/div[3]/table[1]/tbody/tr[3]/td[2]/a')).click();
-  driver.wait(until.titleIs('Select Term'));
+  driver.wait(until.titleIs('Select Term'), 1000);
 
   /**
    * select "Fall 2015"
    */
   driver.findElement(By.xpath('//*[@id="term_id"]/option')).click();
   driver.findElement(By.xpath('/html/body/div[3]/form/input')).click();
-  driver.wait(until.titleIs(/*SOMETHING*/));
+  driver.wait(until.titleIs(/*SOMETHING*/), 1000);
 
   // to be contiued when I know what registration looks like on the site
 
