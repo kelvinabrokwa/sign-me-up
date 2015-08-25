@@ -7,6 +7,9 @@ Checks the William & Mary [Open Course List](https://courselist.wm.edu/courselis
 
 ```
 git clone https://github.com/kelvinabrokwa/sign-me-up.git
+cd sign-me-up
+npm install
+pip install -r requirements.txt
 ```
 
 Populate your env variables with the following:
