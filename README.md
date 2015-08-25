@@ -19,16 +19,9 @@ export WM_USERNAME='<your_wm_username>'
 export WM_PASSWORD='<your_wm_password>'
 ```
 
-Next, schedule the job using cron
+Next, schedule the job using cron by running the following command (note that this will remove all other scheduled jobs for the user. If you don't want to do this, manually edit your crontab by running `crontab -e` and appending the contents of [cron-file.txt](/cron-file.txt) to that file):
+
 
 ```sh
-crontab -e
+crontab cron-file.txt
 ```
-
-Add the following line to your crontab file:
-
-```sh
-*/3 * * * * ~/ABSOLUTE_PATH_TO_THIS_REPO/run.sh <YOUR_CLASS_CRN>
-```
-
-And then save and exit (this will check the courselist every 3 minutes).
