@@ -21,7 +21,7 @@ export WM_USERNAME='<your_wm_username>'
 export WM_PASSWORD='<your_wm_password>'
 ```
 
-####Edit cron-file.txt
+####Edit [cron-file.txt](/cron-file.txt)
 
 - Add the correct path to [run.sh](/run.sh) in place of `<ABSOLUTE_PATH_TO_THIS_REPO>`
 - Add your desired CRN in place of `<YOUR_CLASS_CRN>`.

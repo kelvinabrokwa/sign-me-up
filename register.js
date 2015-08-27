@@ -69,9 +69,16 @@ function register(CRN) {
    */
   driver.findElement(By.xpath('//*[@id="term_id"]/option')).click();
   driver.findElement(By.xpath('/html/body/div[3]/form/input')).click();
-  driver.wait(until.titleIs(/*SOMETHING*/), 1000);
+  driver.wait(until.titleIs('Add/Drop Classes:'), 1000);
 
-  // to be contiued when I know what registration looks like on the site
+  /**
+   * enter CRN and register
+   */
+  driver.findElement(By.xpath('//*[@id="crn_id1"]')).sendKeys(CRN);
+  driver.findElement(By.xpath('/html/body/div[3]/form/input[19]')).click();
+
+  // to do: check for sucess
+  console.log('successfully reigstered for', CRN);
 
   driver.quit();
 }
