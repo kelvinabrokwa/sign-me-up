@@ -16,15 +16,17 @@ process.stdin.on('readable', function() {
 });
 process.stdin.on('end', function() {
   data = JSON.parse(data);
-  var isClosed = R.find(R.propEq('crn', crn))(data).status === 'CLOSED';
+  console.log(crn);
+  var course = R.find(R.propEq('crn', crn))(data);
 
-  if (isClosed) {
-    console.log('The course with CRN', crn, 'is closed.');
-  } else if (isClosed === 'undefined') {
+  if (course === undefined) {
     console.log('No class with the given CRN was found');
-  } else {
+  } else if (course.status === 'CLOSED') {
+    console.log('The course with CRN', crn, 'is closed');
+  } else if (course.status === 'OPEN') {
     register(crn);
   }
+
 
   console.log('---');
 });
